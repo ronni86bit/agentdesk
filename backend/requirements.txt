@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+crewai[litellm]
+groq
+qdrant-client
+sentence-transformers
+tavily-python
+pydantic
+python-dotenv
+sse-starlette
+pypdf
+python-multipart
+fpdf2
+httpx
+pytest

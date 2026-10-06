@@ -1,0 +1,44 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Local session logs and assistant-tool state
+session-ses_*.md
+.qodo/
+.zcode/
+.zcodeignore
+
+# Generated run artifacts (benchmark results are never committed)
+backend/eval/results/
+backend/last_report.md
+backend/last_report_meta.json

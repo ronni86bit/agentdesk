@@ -1,0 +1,294 @@
+{
+  "benchmark": "agentdesk-hallucination",
+  "version": "1.1.0",
+  "description": "Fixed question set for the AgentDesk hallucination/grounding ablation benchmark. v1.1.0: every question's reference source pinned to an exact authoritative document URL and LIVE-VERIFIED on 2026-09-14; reference_sources[].content carries verbatim excerpts of the fetched page text (or faithful transcription of fetched API values) so the judging corpus is deterministic, network-independent, and auditable. source_curation is 'curated' for all questions.",
+  "source_policy": "Primary institutional sources only (WHO, World Bank WDI API, IPCC, NOAA, UN/UNSD, FAO, IRENA-derived OWID, UNEP). Each content field is copied verbatim (or transcribed exactly for JSON APIs) from a live fetch on 2026-09-14. Three questions whose original wording could not be evidenced by any fetchable authoritative document were replaced, preserving their domains: q03 influenza regional recommendations -> WHO tuberculosis burden; q09 IEA EV sales (bot-blocked, unfetchable) -> WHO road traffic deaths; q13/q14/q20 reworded to the exact facts their authoritative source states.",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "How has the global number of malaria cases and deaths changed in the most recent year for which the WHO publishes data, and which region carries the largest burden?",
+      "domain": "health",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "WHO fact sheet: Malaria (4 December 2025)",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/malaria",
+          "notes": "Verified live 2026-09-14; excerpt verbatim from page text (Key facts + Disease burden).",
+          "content": "Globally in 2024, there were an estimated 282 million malaria cases and 610 000 malaria deaths in 80 countries. The WHO African Region carries a disproportionately high share of the global malaria burden. In 2024, the WHO African Region was home to 95% of malaria cases (265 million) and 95% (579 000) of malaria deaths. According to the latest World malaria report, there were 282 million cases of malaria in 2024, an increase of about 9 million cases (3%) compared with 2023. The estimated number of malaria deaths stood at 610 000 in 2024 compared to 598 000 in 2023. Over half of all deaths in the Region occurred in three countries: Nigeria (31.9%), the Democratic Republic of the Congo (11.7%), and Niger (6.1%). Children under 5 years of age accounted for about 76% of all malaria deaths in the Region."
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "question": "What share of infants worldwide received three doses of the DTP-containing vaccine (DTP3 coverage) according to the most recent WHO estimates?",
+      "domain": "health",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "WHO fact sheet: Immunization coverage (15 July 2026)",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage",
+          "notes": "Verified live 2026-09-14; excerpt verbatim from page text.",
+          "content": "Globally in 2025, there were 13.5 million children missing out on any vaccination – so-called zero-dose children. Coverage of a third dose of vaccine protecting against diphtheria, tetanus, and pertussis (DTP3) was 85% in 2025. During 2025, about 85% of infants worldwide (110 million) received 3 doses of diphtheria-tetanus-pertussis (DTP3) vaccine, protecting them against infectious diseases that can cause serious illness and disability or be fatal. The proportion of children receiving a first dose of measles vaccine was 84% in 2025. Global coverage for the first dose of HPV vaccine in girls was 33% in 2025."
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "question": "How many people fell ill with tuberculosis and died from it in 2024, and what is tuberculosis' rank among infectious causes of death, according to the WHO?",
+      "domain": "health",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "WHO fact sheet: Tuberculosis (24 March 2026)",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+          "notes": "Verified live 2026-09-14; excerpt verbatim. Replaces the original influenza regional-recommendations question, which no fetchable authoritative document evidences.",
+          "content": "A total of 1.23 million people died from tuberculosis (TB) in 2024 (including 150 000 among people with HIV). Globally, TB is the world's leading cause of death from a single infectious agent and among the top 10 causes of death. In 2024, an estimated 10.7 million people fell ill with TB worldwide, including 5.8 million men, 3.7 million women and 1.2 million children. Global efforts to combat TB have saved an estimated 83 million lives since the year 2000. Only about 2 in 5 people with drug-resistant TB accessed treatment in 2024."
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "question": "What was the estimated number of excess deaths associated with the COVID-19 pandemic globally in 2020 and 2021 according to the WHO?",
+      "domain": "health",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "WHO data story: Global excess deaths associated with COVID-19, January 2020 - December 2021 (May 2022)",
+          "url": "https://www.who.int/data/stories/global-excess-deaths-associated-with-covid-19-January-2020-December-2021",
+          "notes": "Verified live 2026-09-14; excerpt verbatim from page text.",
+          "content": "The global excess mortality associated with COVID-19 was 14.91 million in the 24 months between 1 January 2020 and 31 December 2021, representing 9.49 million more deaths than those globally reported as directly attributable to COVID-19. Twenty countries, representing approximately 50% of the global population, account for over 80% of the estimated global excess mortality for the January 2020 to December 2021 period. Excess mortality includes deaths attributable directly to COVID-19 that were counted and reported to WHO by countries, and deaths indirectly associated with COVID-19, due to other causes and diseases, resulting from the wider impact of the pandemic on health systems and society."
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "question": "What level of global warming relative to pre-industrial times does the IPCC attribute to human activities in its Sixth Assessment Report?",
+      "domain": "climate",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "IPCC press release: Climate change widespread, rapid, and intensifying (AR6 WGI, 9 August 2021)",
+          "url": "https://www.ipcc.ch/2021/08/09/ar6-wg1-20210809-pr/",
+          "notes": "Verified live 2026-09-14; excerpt verbatim from press release text.",
+          "content": "The report shows that emissions of greenhouse gases from human activities are responsible for approximately 1.1°C of warming since 1850-1900, and finds that averaged over the next 20 years, global temperature is expected to reach or exceed 1.5°C of warming. It has been clear for decades that the Earth's climate is changing, and the role of human influence on the climate system is undisputed. The evidence is clear that carbon dioxide (CO2) is the main driver of climate change, even as other greenhouse gases and air pollutants also affect the climate."
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "question": "How has atmospheric carbon dioxide concentration changed in recent years, and since when has it been directly measured, according to NOAA's Global Monitoring Laboratory?",
+      "domain": "climate",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "NOAA GML: Trends in Atmospheric Carbon Dioxide (global)",
+          "url": "https://gml.noaa.gov/ccgg/trends/global.html",
+          "notes": "Verified live 2026-09-14; excerpt verbatim (values are page-rendered measurements).",
+          "content": "June 2026: 427.62 ppm. June 2025: 425.90 ppm. Last updated: Sep 05, 2026. The graphs show monthly mean carbon dioxide globally averaged over marine surface sites. The Global Monitoring Laboratory has measured carbon dioxide and other greenhouse gases for several decades at a globally distributed network of air sampling sites."
+        },
+        {
+          "title": "NOAA GML: Trends in Atmospheric Carbon Dioxide (Mauna Loa, Hawaii)",
+          "url": "https://gml.noaa.gov/ccgg/trends/mlo.html",
+          "notes": "Verified live 2026-09-14; excerpt verbatim (values are page-rendered measurements).",
+          "content": "August 2026: 427.55 ppm. August 2025: 425.48 ppm. The carbon dioxide data on Mauna Loa constitute the longest record of direct measurements of CO2 in the atmosphere. They were started by C. David Keeling of the Scripps Institution of Oceanography in March of 1958 at a facility of the National Oceanic and Atmospheric Administration. NOAA started its own CO2 measurements in May of 1974, and they have run in parallel with those made by Scripps since then."
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "question": "What share of global electricity generation comes from renewable sources according to the latest data aggregated by Our World in Data (Ember / Energy Institute)?",
+      "domain": "energy",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "Our World in Data: Renewable Energy (topic page)",
+          "url": "https://ourworldindata.org/renewable-energy",
+          "notes": "Verified live 2026-09-14; excerpt verbatim from article text. Aggregates Ember / Energy Institute data.",
+          "content": "Globally, about one-third of our electricity comes from renewables. Just under a tenth of the world's primary energy is now sourced from renewable technologies. Hydroelectric power has been one of our oldest and largest sources of low-carbon energy. Hydroelectric generation at scale dates back more than a century, and is still our largest renewable source – excluding traditional biomass, it still accounts for around 40% of renewable generation. Since transport and heating tend to be harder to decarbonise – they are more reliant on oil and gas – renewables tend to have a higher share in the electricity mix versus the total energy mix."
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "question": "How did the levelized cost of electricity from utility-scale solar photovoltaics change between 2009 and 2024, according to Our World in Data's analysis of Lazard data?",
+      "domain": "energy",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "Our World in Data: Why did renewables become so cheap so fast? (Lazard 2024 LCOE data)",
+          "url": "https://ourworldindata.org/cheap-renewables-growth",
+          "notes": "Verified live 2026-09-14; excerpt verbatim from article text. Replaces the IRENA-based wording (irena.org blocks automated fetches).",
+          "content": "Electricity from utility-scale solar photovoltaics cost $496 per MWh in 2009. Within 15 years the price declined by 88%. In the ten years from 2010 to 2019, the global price of electricity from new coal (LCOE) declined from $111 to $109. While solar got 89% cheaper and wind 70%, the price of electricity from coal declined by merely 2%. The price of solar modules declined from $106 to $0.38 per watt. A decline of 99.6%. The learning rate of solar PV modules is 20.2%. Solar was more than three times more expensive than coal [15 years ago]."
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "question": "How many people die each year from road traffic crashes, and which age group is most affected, according to the WHO?",
+      "domain": "transport",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "WHO fact sheet: Road traffic injuries (20 July 2026)",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries",
+          "notes": "Verified live 2026-09-14; excerpt verbatim. Replaces the original IEA EV-sales question (iea.org blocks automated fetches; no fetchable authoritative EV-share document available).",
+          "content": "Approximately 1.16 million people die each year as a result of road traffic crashes. Road traffic injuries are the leading cause of death for children and young adults aged 5–29 years. 92% of the world's fatalities on the roads occur in low- and middle-income countries, even though these countries have around 60% of the world's vehicles. More than half of all road traffic deaths are among vulnerable road users, including pedestrians, cyclists and motorcyclists. Road traffic crashes cost most countries 3% of their gross domestic product."
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "What was global GDP growth in 2024 and 2025 according to the World Bank's World Development Indicators?",
+      "domain": "economy",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "World Bank WDI API: NY.GDP.MKTP.KD.ZG — GDP growth (annual %), World",
+          "url": "https://api.worldbank.org/v2/country/WLD/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=6",
+          "notes": "Verified live 2026-09-14; faithful transcription of fetched JSON values (lastupdated 2026-07-13).",
+          "content": "World Bank World Development Indicators, indicator NY.GDP.MKTP.KD.ZG \"GDP growth (annual %)\", World (WLD), last updated 2026-07-13: 2025: 2.92 percent. 2024: 2.90 percent. 2023: 2.86 percent. 2022: 3.44 percent. 2021: 6.49 percent. 2020: -2.89 percent."
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "What share of the world population lived below the $3.00-a-day international poverty line (2021 PPP) according to the most recent World Bank estimate?",
+      "domain": "economy",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "World Bank WDI API: SI.POV.DDAY — Poverty headcount ratio at $3.00 a day (2021 PPP), World",
+          "url": "https://api.worldbank.org/v2/country/WLD/indicator/SI.POV.DDAY?format=json&per_page=6",
+          "notes": "Verified live 2026-09-14; faithful transcription of fetched JSON values (lastupdated 2026-07-13).",
+          "content": "World Bank World Development Indicators, indicator SI.POV.DDAY \"Poverty headcount ratio at $3.00 a day (2021 PPP) (% of population)\", World (WLD), last updated 2026-07-13: 2024: 10.4 percent. 2023: 10.6 percent. 2022: 10.9 percent. 2021: 11.3 percent. 2020: 11.4 percent."
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "What was the global unemployment rate in 2024 and 2025 according to ILO-modelled estimates in the World Bank's World Development Indicators?",
+      "domain": "economy",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "World Bank WDI API: SL.UEM.TOTL.ZS — Unemployment, total (modeled ILO estimate), World",
+          "url": "https://api.worldbank.org/v2/country/WLD/indicator/SL.UEM.TOTL.ZS?format=json&per_page=6",
+          "notes": "Verified live 2026-09-14; faithful transcription of fetched JSON values (lastupdated 2026-07-13). Replaces the ILO WESO publication page, whose HTML carries no unemployment figures.",
+          "content": "World Bank World Development Indicators, indicator SL.UEM.TOTL.ZS \"Unemployment, total (% of total labor force) (modeled ILO estimate)\", World (WLD), last updated 2026-07-13: 2025: 4.79 percent. 2024: 4.81 percent. 2023: 4.85 percent. 2022: 5.23 percent. 2021: 6.05 percent. 2020: 6.59 percent."
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "question": "How did global primary and secondary school completion rates change between 2015 and 2023, according to the UN Sustainable Development Goals Report 2024?",
+      "domain": "education",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "UN SDG Report 2024 — Goal 4: Quality education (UN Statistics Division)",
+          "url": "https://unstats.un.org/sdgs/report/2024/goal-04/",
+          "notes": "Verified live 2026-09-14; excerpt verbatim. Reworded from the original out-of-school-children question (no fetchable authoritative page carries that figure).",
+          "content": "Between 2015 and 2023, the primary school completion rate increased from 85 per cent to 88 per cent, the lower secondary completion rate from 74 per cent to 78 per cent, and the upper secondary completion rate from 53 per cent to 59 per cent. However, only two in three children in sub-Saharan Africa complete primary school on time. Globally, girls' completion rates exceed those of boys by 2 to 3 percentage points in both primary and secondary education. Seven out of 10 children globally attended organized learning one year before the official primary entry age in 2022, a rate unchanged since 2015."
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "question": "What is the global adult literacy rate according to the latest UNESCO Institute for Statistics estimates reported in the World Bank's World Development Indicators, and how has it changed since 2020?",
+      "domain": "education",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "World Bank WDI API: SE.ADT.LITR.ZS — Literacy rate, adult total (% of people ages 15+), World (source: UNESCO UIS)",
+          "url": "https://api.worldbank.org/v2/country/WLD/indicator/SE.ADT.LITR.ZS?format=json&per_page=6",
+          "notes": "Verified live 2026-09-14; faithful transcription of fetched JSON values (lastupdated 2026-07-13).",
+          "content": "World Bank World Development Indicators, indicator SE.ADT.LITR.ZS \"Literacy rate, adult total (% of people ages 15 and above)\", World (WLD), last updated 2026-07-13: 2024: 87.7 percent. 2023: 87.6 percent. 2022: 87.4 percent. 2021: 87.2 percent. 2020: 87.0 percent."
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "question": "How many people faced hunger worldwide in the most recent FAO State of Food Security and Nutrition in the World report, and how many people cannot afford a healthy diet?",
+      "domain": "agriculture",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "FAO: The State of Food Security and Nutrition in the World (SOFI) — flagship publication page, 2026 edition",
+          "url": "https://www.fao.org/publications/sofi/",
+          "notes": "Verified live 2026-09-14; excerpt verbatim from page text.",
+          "content": "The State of Food Security and Nutrition in the World 2026 — Understanding and addressing the high cost of a healthy diet. Despite sustained, gradual improvement in recent years, global hunger and food insecurity remain far above the targets set by the 2030 Agenda for Sustainable Development. It is estimated that 645 million people faced hunger in 2025. Beyond ensuring access to sufficient dietary energy, populations must have economic access to safe, diverse and nutritious foods. Yet, healthy diets are unaffordable for about 2.7 billion people worldwide. SOFI is jointly produced with fellow UN agencies IFAD, UNICEF, WFP and WHO."
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "question": "What share of the world population used the internet in 2024 and 2025 according to ITU data reported in the World Bank's World Development Indicators?",
+      "domain": "technology",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "World Bank WDI API: IT.NET.USER.ZS — Individuals using the Internet (% of population), World (source: ITU)",
+          "url": "https://api.worldbank.org/v2/country/WLD/indicator/IT.NET.USER.ZS?format=json&per_page=6",
+          "notes": "Verified live 2026-09-14; faithful transcription of fetched JSON values (lastupdated 2026-07-13).",
+          "content": "World Bank World Development Indicators, indicator IT.NET.USER.ZS \"Individuals using the Internet (% of population)\", World (WLD), last updated 2026-07-13: 2025: 73.6 percent. 2024: 71.2 percent. 2023: 69.2 percent. 2022: 67.0 percent. 2021: 63.8 percent. 2020: 60.1 percent."
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "question": "How many mobile-cellular subscriptions per 100 people exist worldwide according to the most recent ITU estimates reported in the World Bank's World Development Indicators?",
+      "domain": "technology",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "World Bank WDI API: IT.CEL.SETS.P2 — Mobile cellular subscriptions (per 100 people), World (source: ITU)",
+          "url": "https://api.worldbank.org/v2/country/WLD/indicator/IT.CEL.SETS.P2?format=json&per_page=6",
+          "notes": "Verified live 2026-09-14; faithful transcription of fetched JSON values (lastupdated 2026-07-13).",
+          "content": "World Bank World Development Indicators, indicator IT.CEL.SETS.P2 \"Mobile cellular subscriptions (per 100 people)\", World (WLD), last updated 2026-07-13: 2025: 111.5 per 100 people. 2024: 110.4 per 100 people. 2023: 109.8 per 100 people. 2022: 108.0 per 100 people. 2021: 106.7 per 100 people. 2020: 104.8 per 100 people."
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "question": "How is global plastic waste projected to change by 2060 under a business-as-usual scenario, according to the UN Environment Programme?",
+      "domain": "environment",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "UNEP: Plastic pollution (topic page)",
+          "url": "https://www.unep.org/plastic-pollution",
+          "notes": "Verified live 2026-09-14; excerpt verbatim. Reworded from the original waterways question (no fetchable UNEP page carries a specific waterways-tonnage figure).",
+          "content": "Plastic pollution poses a global challenge, with plastic waste projected to nearly triple by 2060 under a business-as-usual scenario. Plastic has many valuable uses in our daily lives, but our current production and consumption practices and levels pose threats to our health and environment. UNEP supports governments, businesses, financial institutions, and other stakeholders in driving a just transition to a circular economy for plastics, helping to reduce plastic pollution and its impacts."
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "question": "How many premature deaths per year does the WHO attribute to ambient (outdoor) air pollution?",
+      "domain": "environment",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "WHO fact sheet: Ambient (outdoor) air pollution (24 October 2024)",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health",
+          "notes": "Verified live 2026-09-14; excerpt verbatim from page text.",
+          "content": "In 2019, 99% of the world's population was living in places where the WHO air quality guidelines levels were not met. The combined effects of ambient air pollution and household air pollution are associated with 6.7 million premature deaths annually. Ambient (outdoor) air pollution is estimated to have caused 4.2 million premature deaths worldwide in 2019. Some 89% of those premature deaths occurred in low- and middle-income countries, and the greatest number in the WHO South-East Asia and Western Pacific Regions. WHO estimates that in 2019, some 68% of outdoor air pollution related premature deaths were due to ischaemic heart disease and stroke, 14% were due to chronic obstructive pulmonary disease, 14% were due to acute lower respiratory infections, and 4% of deaths were due to lung cancers."
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "question": "When did the world population reach 8 billion, when does the UN project it will reach 9 billion, and what peak population level does the UN project?",
+      "domain": "demographics",
+      "source_curation": "curated",
+      "reference_sources": [
+        {
+          "title": "United Nations — Global Issues: Population (UN DESA / World Population Prospects)",
+          "url": "https://www.un.org/en/global-issues/population",
+          "notes": "Verified live 2026-09-14; excerpt verbatim. Reworded to the exact facts this authoritative page states.",
+          "content": "On 15 November 2022, the world's population reached 8 billion people, a milestone in human development. While it took the global population 12 years to grow from 7 to 8 billion, it will take approximately 15 years—until 2037— for it to reach 9 billion, a sign that the overall growth rate of the global population is slowing. The world's population is projected to continue growing for the next 50 to 60 years, peaking at approximately 10.3 billion by the mid-2080. After reaching this peak, it is expected to gradually decline to around 10.2 billion by the century's end. According to the World Population Prospects (2024 Revision), the global fertility rate stands at 2.25 live births per woman, one child fewer than a generation ago."
+        }
+      ]
+    }
+  ]
+}
